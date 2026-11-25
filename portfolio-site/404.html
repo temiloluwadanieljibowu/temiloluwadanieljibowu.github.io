@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en" data-default-theme="dark">
+<head>
+  <meta charset="utf-8" />
+  <base href="/" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <script>
+    (function () {
+      var d = document.documentElement, t = null;
+      try { t = localStorage.getItem("theme"); } catch (e) {}
+      if (t !== "light" && t !== "dark") t = d.getAttribute("data-default-theme") || "dark";
+      d.setAttribute("data-theme", t);
+    })();
+  </script>
+  <title>Page not found | Temiloluwa Daniel Jibowu</title>
+  <meta name="robots" content="noindex" />
+  <link rel="icon" type="image/png" sizes="64x64" href="assets/images/brand/favicon-dark.png" />
+  <link rel="icon" type="image/png" sizes="64x64" href="assets/images/brand/favicon-light.png" media="(prefers-color-scheme: light)" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Geist:wght@400..700&family=Geist+Mono:wght@400..600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <style>
+    .lost { min-height: 100vh; display: grid; place-items: center; text-align: center; padding: 24px; }
+    .lost h1 { font-size: clamp(2.4rem, 7vw, 4rem); margin: 16px 0 12px; }
+    .lost p { color: var(--text-2); max-width: 40ch; margin: 0 auto 28px; }
+    .lost .lost-logo { height: 110px; width: auto; margin: 0 auto 22px; }
+  </style>
+</head>
+<body>
+  <canvas id="starfield" aria-hidden="true"></canvas>
+  <div class="nebula" aria-hidden="true"></div>
+  <main class="lost">
+    <div>
+      <img class="lost-logo logo-on-dark" src="assets/images/brand/logo-full-dark.png" alt="Temiloluwa Daniel Jibowu logo" width="352" height="260" />
+      <img class="lost-logo logo-on-light" src="assets/images/brand/logo-full-light.png" alt="Temiloluwa Daniel Jibowu logo" width="352" height="260" />
+      <p class="eyebrow"><span>404</span>Signal lost</p>
+      <h1>This page drifted out of orbit.</h1>
+      <p>The link may be outdated or mistyped. Head back to the portfolio to find projects, skills and contact details.</p>
+      <a class="btn btn-primary" href="./">Back to the portfolio</a>
+    </div>
+  </main>
+  <script src="js/starfield.js"></script>
+</body>
+</html>
